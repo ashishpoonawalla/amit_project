@@ -1,35 +1,47 @@
 import logo from "../assets/react.svg";
+import { useState } from "react";
+import { FaBars, FaXmark } from "react-icons/fa6";
 import { GrLanguage } from "react-icons/gr";
+import { navItems } from "./navItems";
 
 const Navbar = () => {
-    const navItems=[
-        {link: "Overview", path: "home"},
-        {link: "Feature", path: "feature"},
-        {link: "About", path: "about"},
-        {link: "Pricing", path: "pricing"},
-    ]
+    const [isMenuOpen, setIsMenuOpen] = useState(false)
+
+    const toggleMenu =()=>{
+        setIsMenuOpen(!isMenuOpen)
+    }
+
     return (
-        <nav>
-            <div className="text-xl">
-                <div>
+        <nav className="bg-white md:px-14 p-4 max-w-screen-2xl mx-auto text-primary">
+            <div className="text-lg container mx-auto flex justify-between items-center font-medium">
+                <div className="flex space-x-14 items-center">
                     <a href="/" className="text-2xl font-semibold flex items-center space-x-3 text-primary">
-                        <img src={logo} alt="" className="w-10 inline-block items-center"/><span>XYZ</span>
+                        <img src={logo} alt="" className="w-10 inline-block items-center" /><span>XYZ</span>
                     </a>
 
                     {/* nav items */}
-                    <ul className="md:flex space-x-12">
+                    <ul className="md:flex space-x-12 hidden">
                         {
-                            navItems.map(({link, path})=> <a key={link} href={path} className="block hover:text-gray-300">{link}</a>)
+                            navItems.map(({ link, path }) => <a key={link} href={path} className="block hover:text-gray-300">{link}</a>)
                         }
                     </ul>
                 </div>
 
-                  {/* language & signup */}
-                  <div className="space-x-12 hidden md:flex items-center">
-                        <a href="/" className="hidden lg:flex items-center hover:text-secondary"><GrLanguage className="mr-2"/><span>Language</span></a>
-                        <button className="bg-secondary py-2 px-4 transition-all duration-300 rounded
+                {/* language & signup */}
+                <div className="space-x-12 hidden md:flex items-center">
+                    <a href="/" className="hidden lg:flex items-center hover:text-secondary"><GrLanguage className="mr-2" /><span>Language</span></a>
+                    <button className="bg-secondary py-2 px-4 transition-all duration-300 rounded
                          hover:text-white hover:bg-indigo-600">Sign up</button>
-                  </div>
+                </div>
+
+                {/* menu btn. only display on mobile */}
+                <div className="md:hidden">
+                    <button onClick={toggleMenu} className="text-white focus:outline-none focus:text-gray-300">
+                    {
+                        isMenuOpen ? (<FaXmark/>): (<FaBars/>)
+                    }
+                    </button>
+                </div>
             </div>
         </nav>
     )
