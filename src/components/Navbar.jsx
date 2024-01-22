@@ -1,4 +1,5 @@
 import logo from "../assets/react.svg";
+import { GrLanguage } from "react-icons/gr";
 
 const Navbar = () => {
     const navItems=[
@@ -25,7 +26,7 @@ const Navbar = () => {
 
                   {/* language & signup */}
                   <div className="space-x-12 hidden md:flex items-center">
-                        <a href="/">Language</a>
+                        <a href="/" className="hidden lg:flex items-center hover:text-secondary"><GrLanguage className="mr-2"/><span>Language</span></a>
                         <button className="bg-secondary py-2 px-4 transition-all duration-300 rounded
                          hover:text-white hover:bg-indigo-600">Sign up</button>
                   </div>
