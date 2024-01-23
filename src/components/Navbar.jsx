@@ -17,7 +17,7 @@ const Navbar = () => {
                 <div className="text-lg container mx-auto flex justify-between items-center font-medium">
                     <div className="flex space-x-14 items-center">
                         <a href="/" className="text-2xl font-semibold flex items-center space-x-3 text-primary">
-                            <img src={logo} alt="" className="w-10 inline-block items-center" /><span>XYZ</span>
+                            <img src={logo} alt="" className="w-10 inline-block items-center" /><span>LOGO</span>
                         </a>
 
                         {/* nav items */}
