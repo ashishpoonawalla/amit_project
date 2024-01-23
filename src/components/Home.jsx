@@ -10,8 +10,8 @@ const Home = () => {
                         <img src={banner} alt="" className="lg:h-[386px]" />
                     </div>
                     {/* banner content */}
-                    <div>
-                        <h2>Develop your skills without diligence</h2>
+                    <div className="md:w-3/5">
+                        <h2 className="md:text-6xl text-4xl font-bold text-white mb-6 leading-[110.4px]">Develop your skills without diligence</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                         <div>
                             <button>Get Started</button>
