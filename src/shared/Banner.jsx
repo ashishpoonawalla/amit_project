@@ -11,7 +11,7 @@ const Banner = () => {
                     </div>
                     {/* banner content */}
                     <div className="md:w-3/5">
-                        <h2 className="md:text-6xl text-4xl font-bold text-white mb-6 leading-relaxed">call me 7276116725. Expert need in Business process</h2>
+                        <h2 className="md:text-6xl text-4xl font-bold text-white mb-6 leading-relaxed">Expert need in Business process</h2>
                         <p className="text-[#EBEBEB] text-2xl mb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                         <div className="space-x-5 space-y-4">
                             <button className="btnPrimary">Get Started</button>
