@@ -1,8 +1,8 @@
 /** @type {import('tailwindcss').Config} */
-export default {
+module.exports = {
   content: [
     "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
+    "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
     extend: {
@@ -10,8 +10,9 @@ export default {
         "primary": "#010851",
         "secondary": "#9A7AF1",
         "tartiary": "#707070",
-        "pink": "#EE9AE5"
-
+        "pink": "#EE9AE5",
+        "footerPrimary": "#176B87",
+        "footerSecondary": "#EEF5FF",
       },
       boxShadow:{
         '3xl': '0px 10px 50px 0px rgba(0,0,0, 0.15)',
